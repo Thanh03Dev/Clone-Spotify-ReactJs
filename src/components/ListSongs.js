@@ -14,13 +14,13 @@ export default function ListSongs() {
   }, [song]);
   return (
     <div className="col-span-2 overflow-y-scroll">
-      <table className="table-auto w-full font-semibold">
+      <table className="table-auto w-full font-normal">
         <thead className="text-white h-12">
           <tr>
-            <td className="w-[10%]">#</td>
+            <td className="w-[10%] text-center">#</td>
             <td className="text-left">Title</td>
-            <td className="w-[10%]">Author</td>
-            <td className="w-[10%]">
+            <td className="w-[10%] text-center">Author</td>
+            <td className="w-[10%] text-center">
               <i className="fa fa-download"></i>
             </td>
           </tr>

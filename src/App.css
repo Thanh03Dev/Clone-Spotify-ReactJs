@@ -5,7 +5,7 @@
 
 ::selection{ 
   background: transparent;
-  color: aqua;
+  color: #38bdf8;
 }
 
 /* width */
@@ -26,4 +26,8 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.rhap_time{ 
+  color: #e6e7e8 !important;
 }

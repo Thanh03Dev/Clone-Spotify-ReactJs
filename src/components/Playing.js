@@ -15,6 +15,7 @@ export default function Playing() {
   return (
     <div>
       <AudioPlayer
+        autoPlay
         className="player-music"
         showSkipControls={true}
         showJumpControls={false}
@@ -22,6 +23,7 @@ export default function Playing() {
         layout="stacked-reverse"
         onClickNext={handleClickNext}
         onClickPrevious={handleClickPre}
+        onEnded={handleClickNext}
       />
     </div>
   );

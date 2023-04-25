@@ -11,13 +11,13 @@ function App() {
   const [song, setSong] = useState(Data[0]);
 
   const handleSetSong = (idSong) => {
-    const song = Data.find((song) => song.id === idSong);
-    if (!song) {
-      setSong(Data[0]);
-    } else {
-      setSong(song);
-    }
-    // setSong(song);
+    const song = Data.find((song) => song.id === idSong) || Data[0];
+    // if (!song) {
+    //   setSong(Data[0]);
+    // } else {
+    //   setSong(song);
+    // }
+    setSong(song);
   };
   return (
     <div className="App">
@@ -28,7 +28,7 @@ function App() {
           <DetailSong />
 
           {/*span 2 */}
-          <ListSongs />
+          <ListSongs setSong={setSong} />
         </div>
         <Playing />
       </Songs.Provider>

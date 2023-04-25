@@ -9,13 +9,15 @@ export default function ListSongs() {
     setidSong(idSong);
     handleSetSong(idSong);
   };
+
   useEffect(() => {
     setidSong(song.id);
   }, [song]);
+
   return (
     <div className="col-span-2 overflow-y-scroll">
       <table className="table-auto w-full font-normal">
-        <thead className="text-white h-12">
+        <thead className="text-white h-12 font-bold">
           <tr>
             <td className="w-[10%] text-center">#</td>
             <td className="text-left">Title</td>
@@ -38,7 +40,7 @@ export default function ListSongs() {
               <td className="text-left">{song.name}</td>
               <td className="text-center">{song.author}</td>
               <td className="text-center">
-                <a href="{song.url}">
+                <a href={song.url}>
                   <i className="fa fa-download"></i>
                 </a>
               </td>
